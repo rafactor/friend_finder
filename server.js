@@ -1,20 +1,30 @@
 var express = require('express');
-var path = require('path');
-var routing = require('./app/routing/apiRoutes')
-
+var htmlRouter = require('./app/routing/htmlRoutes');
+var apiRouter = require('./app/routing/apiRoutes');
 var app = express();
+var bodyParser = require('body-parser'); //required for POST
+var path = require('path');
+
+
+
+
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded( {extended: true} ));
 app.use(express.json());
 
-// app.get("/", function (req, res){
-//     routing(req, res)
-// }) 
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.get("/:path", function (req, res){
-    routing(req, res)
-}) 
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+app.use('/', htmlRouter) 
+app.use('/api', apiRouter)
+
+// START THE SERVER
+// =============================================================================
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
