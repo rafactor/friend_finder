@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
 
     <style>
 
@@ -54,7 +55,7 @@
         <h1>Personality Test</h1>
 
         <div class="container">
-        <form>
+        <form method='POST' role='form'>
             <!-- <div class="row"> -->
                     <div class="form-group">
                             <label for="formGroupExampleInput">Name</label>
@@ -62,8 +63,8 @@
                           </div>
             <!-- <div class="row"> -->
                 <div class="custom-file">
-                    <label class="custom-file-label" for="customFile">Select a nice photo!</label>
-                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="photo">Select a nice photo!</label>
+                    <input type="file" class="custom-file-input" id="photo">
                 </div>
             <!-- </div> -->
 
@@ -284,13 +285,15 @@
 
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id='submit'>Submit</button>
         </form>
     </div>
 
 
     <script src="./coverage/bs-custom-file-input.js"></script>
     <script>
+
+        // upload picture
         document.addEventListener('DOMContentLoaded', function () {
             bsCustomFileInput.init()
 
@@ -300,7 +303,35 @@
                 form.reset()
             })
         });
-    </script>
+
+        // submit button
+        $("#submit").on("click", function(event) {
+            alert('click');
+             event.preventDefault();
+             var surveyAnswer = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                question1: $("#question1").val().trim(),
+                question2: $("#question2").val().trim(),
+                question3: $("#question3").val().trim(),
+                question4: $("#question4").val().trim(),
+                question5: $("#question5").val().trim(),
+                question6: $("#question6").val().trim(),
+                question7: $("#question7").val().trim(),
+                question8: $("#question8").val().trim(),
+                question9: $("#question9").val().trim(),
+                question10: $("#question10").val().trim(),
+            };
+            alert('pos var');
+            console.log(surveyAnswer)
+            $.post("/api/friend", surveyAnswer)
+                .then(function(data) {
+                console.log(data);
+                alert("Adding answer...");
+        });
+    });
+
+</script>
 
 
 
