@@ -1,1 +1,0 @@
-[{"name":"Rafael","photo":"https://test.jpg","scores":[5,1,4,1,5,1,2,5,4,1]}]
