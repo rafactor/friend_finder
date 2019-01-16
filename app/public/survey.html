@@ -55,11 +55,13 @@
         <h1>Personality Test</h1>
 
         <div class="container">
-        <form method='POST' role='form'>
+        <form class="was-validated" method='POST' role='form'>
             <!-- <div class="row"> -->
                     <div class="form-group">
                             <label for="formGroupExampleInput">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <div class="invalid-feedback">Enter your name</div>
+
                           </div>
             <!-- <div class="row"> -->
                 <div class="custom-file">
@@ -82,14 +84,16 @@
                         <div class='d-inline col-md-8'>
                             You find it difficult to introduce yourself to other people.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question1">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question1" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -103,14 +107,16 @@
                         <div class='d-inline col-md-8'>
                             You often get so lost in thoughts that you ignore or forget your surroundings.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question2">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question2" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -124,14 +130,16 @@
                         <div class='d-inline col-md-8'>
                             You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question3">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question3" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -145,14 +153,16 @@
                         <div class='d-inline col-md-8'>
                             You find it easy to stay relaxed even when there is some pressure.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question4">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question4" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -166,14 +176,16 @@
                         <div class='d-inline col-md-8'>
                             You do not usually initiate conversations.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question5">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question5" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -187,14 +199,16 @@
                         <div class='d-inline col-md-8'>
                             You rarely do something just out of sheer curiosity.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question6">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question6" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -208,14 +222,16 @@
                         <div class='d-inline col-md-8'>
                             Being organized is more important to you than being adaptable.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question7">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question7" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -229,14 +245,16 @@
                         <div class='d-inline col-md-8'>
                             You are usually highly motivated and energetic.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question8">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question8" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -250,14 +268,16 @@
                         <div class='d-inline col-md-8'>
                             Winning a debate matters less to you than making sure no one gets upset.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question9">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question9" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -271,14 +291,16 @@
                         <div class='d-inline col-md-8'>
                             Your home and work environments are quite tidy.
                         </div>
-                        <select class="custom-select d-inline col-md-4" id="question10">
-                            <option selected>Choose...</option>
+                        <select class="custom-select d-inline col-md-4" id="question10" required>
+                            <option value="" selected>Choose...</option>
                             <option value="1">1 - Strongly disagree</option>
                             <option value="2">2 - Disagree</option>
                             <option value="3">3 - Neither agree nor disagree</option>
                             <option value="4">4 - Agree</option>
                             <option value="5">5 - Strongly Agree</option>
                         </select>
+                        <div class="invalid-feedback">Please, select an option</div>
+
                     </div>
                 </div>
             </div>
@@ -288,6 +310,8 @@
             <button type="submit" class="btn btn-primary" id='submit'>Submit</button>
         
     </div>
+
+    
 
 
     <script src="./coverage/bs-custom-file-input.js"></script>
@@ -306,27 +330,26 @@
 
         // submit button
         $("#submit").on("click", function(event) {
-            alert('click');
              event.preventDefault();
              var surveyAnswer = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
-                question1: $("#question1").val().trim(),
-                question2: $("#question2").val().trim(),
-                question3: $("#question3").val().trim(),
-                question4: $("#question4").val().trim(),
-                question5: $("#question5").val().trim(),
-                question6: $("#question6").val().trim(),
-                question7: $("#question7").val().trim(),
-                question8: $("#question8").val().trim(),
-                question9: $("#question9").val().trim(),
-                question10: $("#question10").val().trim(),
+                scores: [
+                $("#question1").val().trim(),
+                $("#question2").val().trim(),
+                $("#question3").val().trim(),
+                $("#question4").val().trim(),
+                $("#question5").val().trim(),
+                $("#question6").val().trim(),
+                $("#question7").val().trim(),
+                $("#question8").val().trim(),
+                $("#question9").val().trim(),
+                $("#question10").val().trim(),
+                ],
+                
             };
-            alert('pos var');
-            console.log(surveyAnswer)
             $.post("/api/friend", surveyAnswer,function(data, status){
                 console.log(data);
-                alert("Adding answer...");                
         });
     });
 
