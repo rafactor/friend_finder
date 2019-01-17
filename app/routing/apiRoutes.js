@@ -83,11 +83,10 @@ router.route('/friend')
         friendsData.push(newRecord);
         saveData();
         
-
-        console.log(friendsData)
+        console.log('best friend: ' + friendsData)
         console.log(friendsData[friendIndex].name)
 
-        res.send(newRecord);
+        res.send(friendsData[friendIndex]);
     })
 
 
